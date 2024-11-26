@@ -79,13 +79,14 @@ $products = json_decode(file_get_contents("products.json"), true);
         }
 
         .btn-custom {
-            background-color: #2a9d8f;
-            border: none;
-        }
+    background-color: #2a9d8f;
+    border: none;
+}
 
-        .btn-custom:hover {
-            background-color: #1b6f5e;
-        }
+.btn-custom:hover {
+    background-color: #1b6f5e;
+}
+
     </style>
 </head>
 
@@ -166,6 +167,14 @@ $products = json_decode(file_get_contents("products.json"), true);
                         </div>
                     <?php endforeach; ?>
                 </div>
+
+                <h2>Modifier vos informations</h2>
+        <form action="update_account.php" method="post">
+            <input type="email" name="email" class="form-control my-2" placeholder="Modifier votre email" required>
+            <input type="password" name="password" class="form-control my-2" placeholder="Modifier votre mot de passe" required>
+            <button class="btn btn-custom w-100" type="submit">Mettre à jour</button>
+        </form>
+
 
                 <h2>Votre Panier</h2>
                 <?php
